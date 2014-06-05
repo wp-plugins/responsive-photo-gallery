@@ -36,6 +36,29 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 View Free Demo: [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
  
 
+
+**Responsive Photo Gallery Pro Features**
+
+* Responsive Gallery
+* Admin Gallery Dashboard
+* 8 types of Animation Effect
+* 5 types of Gallery design layout
+* Unlimited Colors Scheme with opacity Effects
+* 520 Goggle Font Styles integrated with gallery 
+* Integrated with Isotope Effect 
+* Choose Unlimited Font Awesome Icon
+* two Types Of light box integrated with gallery
+* Gallery Categorized Display
+* Add Unlimited Images into Gallery
+* Each gallery associated with unique shortcode.
+* Retina Ready
+* Browser Compatible
+* and more..
+
+View pro Demo: [Responsive Photo Gallery Pro](http://weblizar.com/demo/plugins/premium/responsive-photo-gallery-pro/)
+ 
+
+
 == Features ==
 
 * Responsive Gallery
