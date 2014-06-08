@@ -1,10 +1,10 @@
 === Responsive Photo Gallery ===
 Contributors: weblizar
-Donate link: http://www.weblizar.com/
+Donate link: http://www.weblizar.com/responsive-photo-gallery/
 Tags: responsive gallery, add album, add gallery, add pictures, album, gallery, gallery image, image, multiple pictures, photo, photo album, photo gallery, pictures, upload images, website gallery, albums, best gallery plugin, best portfolio plugin, flash, foto, fotoalbum, gallery album, gallery bank, gallery image, gallery wordpress plugin, grid gallery, image album, image slider, images, lightbox, links, media, modal, photo albums, photo gallery, Photo Slider, photoalbum, photogallery, photos, picture, pictures, plugin, portfolio, portfolio gallery, portfolio wordpress plugin, Post, posts, responsive gallery, seo image, sidebar, slideshow, thumbnails, videos, website gallery, widget, wordpress gallery plugin, wordpress portfolio plugin, wp gallery, wp gallery plugin
 Requires at least: 3.3
 Tested up to: 3.9.1
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,16 +24,13 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 * Fade Animation Effect
 * Two Design Layout
 * Two Types of Color Scheme
-* Various Font Styles
 * Integrated with Isotope Effect 
 * Two Different Font Awesome Icon
 * Bootstrap Model Light Box
-* Gallery Categorized Display
-* Retina Ready
 * Browser Compatible
 * Add Unlimited Images into Gallery
 
-View Free Demo: [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
+*Free Plugin Demo:* [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
  
 
 
@@ -41,21 +38,22 @@ View Free Demo: [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins
 
 * Responsive Gallery
 * Admin Gallery Dashboard
-* 8 types of Animation Effect
-* 5 types of Gallery design layout
+* 8 Types of Animation Effect
+* 5 Types of Gallery design layout
 * Unlimited Colors Scheme with opacity Effects
 * 520 Goggle Font Styles integrated with gallery 
 * Integrated with Isotope Effect 
 * Choose Unlimited Font Awesome Icon
-* two Types Of light box integrated with gallery
+* Two Types Of light box integrated with gallery
 * Gallery Categorized Display
 * Add Unlimited Images into Gallery
 * Each gallery associated with unique shortcode.
 * Retina Ready
 * Browser Compatible
-* and more..
+* And more..
 
-View pro Demo: [Responsive Photo Gallery Pro](http://weblizar.com/demo/plugins/premium/responsive-photo-gallery-pro/)
+*Pro Plugin Demo:* [Responsive Photo Gallery Pro](http://weblizar.com/demo/plugins/premium/responsive-photo-gallery-pro/)
+*Upgrade To Pro:* [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
  
 
 
@@ -112,8 +110,11 @@ Please use WordPress support forum to ask any query regarding any issue.
 
 For more information, see Weblizar(http://wwww.weblizar.com/).
 
+= 0.2 =
+* Bug: Typo fixed
+
 = 0.1 =
-* Add Gallery
-* Gallery Settings
-* Bootstrap Light Box
-* Gallery Shortcode [WRG]
+* New: Add Gallery
+* New: Gallery Settings
+* New: Bootstrap Light Box
+* New: Gallery Shortcode [WRG]
