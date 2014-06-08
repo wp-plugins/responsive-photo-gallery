@@ -53,6 +53,7 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 * And more..
 
 *Pro Plugin Demo:* [Responsive Photo Gallery Pro](http://weblizar.com/demo/plugins/premium/responsive-photo-gallery-pro/)
+
 *Upgrade To Pro:* [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
  
 
