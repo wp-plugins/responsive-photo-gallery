@@ -76,6 +76,7 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 * Browser Compatible
 * Add Unlimited Images into Gallery
 
+
 = Docs & Support =
 
 You can find [docs](http://weblizar.com/), [FAQ](http://www.weblizar.com/faq/) and more detailed information about Twitter Tweets on [Weblizar](http://www.weblizar.com). If you were unable to find the answer to your question on the FAQ or in any of the documentation, you should check the [support forum](http://weblizar.com/) on WordPress.org.
@@ -89,6 +90,7 @@ It is really hard to continue development and support for this free plugin witho
 
 Please contribute to translate our plugin.  Contact at `lizarweb (at) gmail (dot) com`.
 
+
 == Installation ==
 
 1. Upload the entire **responsive-photo-gallery** folder to the **/wp-content/plugins/** directory.
@@ -98,6 +100,7 @@ Please contribute to translate our plugin.  Contact at `lizarweb (at) gmail (dot
 == Frequently Asked Questions ==
 
 Please use WordPress support forum to ask any query regarding any issue.
+
 
 == Screenshots ==
 
