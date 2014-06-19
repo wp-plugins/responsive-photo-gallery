@@ -33,10 +33,7 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 
 **Free Plugin Demo:** [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
  
-
-
 **Responsive Photo Gallery Pro Features**
-
 * Responsive Gallery
 * Admin Gallery Dashboard
 * 8 Types of Animation Effect
@@ -51,14 +48,12 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 * Each gallery associated with unique shortcode.
 * Retina Ready
 * Browser Compatible
-* And more..
 * Multilingual Translation Ready
+* And many more..
 
 **Pro Plugin Demo:** [Responsive Photo Gallery Pro](http://weblizar.com/demo/plugins/premium/responsive-photo-gallery-pro/)
 
 **Upgrade To Pro:** [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
- 
-
 
 == Features ==
 
@@ -75,7 +70,7 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 * Retina Ready
 * Browser Compatible
 * Add Unlimited Images into Gallery
-
+* Multilingual Translation Ready
 
 = Docs & Support =
 
@@ -85,11 +80,9 @@ You can find [docs](http://weblizar.com/), [FAQ](http://www.weblizar.com/faq/) a
 
 It is really hard to continue development and support for this free plugin without contributions from users like you. If you are enjoying using our Testimonial plugin and find it useful, then please consider [__Making a Donation__](http://www.weblizar.com). Your donation will help us to encourage and support the plugin's continued development and better user support.
 
-
 = Translators =
 
 Please contribute to translate our plugin.  Contact at `lizarweb (at) gmail (dot) com`.
-
 
 == Installation ==
 
@@ -101,7 +94,6 @@ Please contribute to translate our plugin.  Contact at `lizarweb (at) gmail (dot
 
 Please use WordPress support forum to ask any query regarding any issue.
 
-
 == Screenshots ==
 
 1. Gallery Preview
@@ -110,7 +102,6 @@ Please use WordPress support forum to ask any query regarding any issue.
 4. Add New Gallery
 5. Insert Images into Gallery
 6. Gallery Settings
- 
 
 == Changelog ==
 
