@@ -1,55 +1,60 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 0.2
+ * Version: 0.3
  * Description: Create and display various animated image gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
- * Plugin URI: http://www.weblizar.com
+ * Plugin URI: http://weblizar.com/plugins/responsive-photo-gallery-pro/
  */
 
 /**
  * Constant Variable
  */
-define("WEBLIZAR_RG_TEXT_DOMAIN","weblizar_image_gallery" );
+define("WEBLIZAR_RPG_TEXT_DOMAIN","weblizar_rpg" );
 define("WEBLIZAR_RG_PLUGIN_URL", plugin_dir_url(__FILE__));
 
 // Run 'Install' script on plugin activation
 register_activation_hook( __FILE__, 'DefaultSettings' );
 function DefaultSettings(){
     $DefaultSettingsArray = serialize( array(
-            'WL_Hover_Animation' => "fade",
-            'WL_Gallery_Layout' => "col-md-6",
-            'WL_Hover_Color' => "#74C9BE",
-            'WL_Hover_Color_Opacity' => 1,
-            'WL_Font_Style' => "Arial",
-            'WL_Image_View_Icon' => "fa-picture-o"
-        ) );
+        'WL_Hover_Animation' => "fade",
+        'WL_Gallery_Layout' => "col-md-6",
+        'WL_Hover_Color' => "#74C9BE",
+        'WL_Hover_Color_Opacity' => 1,
+        'WL_Font_Style' => "Arial",
+        'WL_Image_View_Icon' => "fa-picture-o"
+    ) );
+    add_option("WL_IGP_Settings", $DefaultSettingsArray);
+}
 
-        add_option("WL_IGP_Settings", $DefaultSettingsArray);
+//Get Ready Plugin Translation
+add_action('plugins_loaded', 'GetReadyTranslation');
+function GetReadyTranslation() {
+	load_plugin_textdomain(WEBLIZAR_RPG_TEXT_DOMAIN, FALSE, dirname( plugin_basename(__FILE__)).'/languages/' );
 }
 
 // Register Custom Post Type
 function ResponsiveGallery() {
 
     $labels = array(
-        'name'                => _x( 'Responsive Photo Gallery', 'Responsive Photo Gallery', 'weblizar_image_gallery' ),
-        'singular_name'       => _x( 'Responsive Photo Gallery', 'Responsive Photo Gallery', 'weblizar_image_gallery' ),
-        'menu_name'           => __( 'Responsive Photo Gallery', 'weblizar_image_gallery' ),
-        'parent_item_colon'   => __( 'Parent Item:', 'weblizar_image_gallery' ),
-        'all_items'           => __( 'All Gallery', 'weblizar_image_gallery' ),
-        'view_item'           => __( 'View Gallery', 'weblizar_image_gallery' ),
-        'add_new_item'        => __( 'Add New Gallery', 'weblizar_image_gallery' ),
-        'add_new'             => __( 'Add New Gallery', 'weblizar_image_gallery' ),
-        'edit_item'           => __( 'Edit Gallery', 'weblizar_image_gallery' ),
-        'update_item'         => __( 'Update Gallery', 'weblizar_image_gallery' ),
-        'search_items'        => __( 'Search Gallery', 'weblizar_image_gallery' ),
-        'not_found'           => __( 'No Gallery Found', 'weblizar_image_gallery' ),
-        'not_found_in_trash'  => __( 'No Gallery found in Trash', 'weblizar_image_gallery' ),
+        'name'                => _x( 'Responsive Photo Gallery', 'Responsive Photo Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'singular_name'       => _x( 'Responsive Photo Gallery', 'Responsive Photo Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'menu_name'           => __( 'Responsive Photo Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'parent_item_colon'   => __( 'Parent Item:', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'all_items'           => __( 'All Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'view_item'           => __( 'View Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'add_new_item'        => __( 'Add New Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'add_new'             => __( 'Add New Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'edit_item'           => __( 'Edit Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'update_item'         => __( 'Update Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'search_items'        => __( 'Search Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'not_found'           => __( 'No Gallery Found', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'not_found_in_trash'  => __( 'No Gallery found in Trash', WEBLIZAR_RPG_TEXT_DOMAIN ),
     );
     $args = array(
-        'label'               => __( 'responsive-gallery', 'weblizar_image_gallery' ),
-        'description'         => __( 'Responsive Photo Gallery', 'weblizar_image_gallery' ),
+        'label'               => __( 'Responsive Photo Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
+        'description'         => __( 'Responsive Photo Gallery', WEBLIZAR_RPG_TEXT_DOMAIN ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor', '', '', '', '', '', 'revisions', '', '', '', ),
         //'taxonomies'          => array( 'category', 'post_tag' ),
@@ -119,17 +124,33 @@ add_action( 'wp', 'WeblizarResponsiveGalleryShortCodeDetect' );
 add_action('admin_menu' , 'WRG_SettingsPage');
 
 function WRG_SettingsPage() {
-    add_submenu_page('edit.php?post_type=responsive-gallery', 'Settings', 'Settings', 'administrator', 'image-gallery-settings', 'image_gallery_settings_page_function');
+    add_submenu_page('edit.php?post_type=responsive-gallery', __('Settings', WEBLIZAR_RPG_TEXT_DOMAIN), __('Settings', WEBLIZAR_RPG_TEXT_DOMAIN), 'administrator', 'image-gallery-settings', 'image_gallery_settings_page_function');
+    add_submenu_page('edit.php?post_type=responsive-gallery', 'Pro Features', 'Pro Features', 'administrator', 'get-image-gallery-pro-plugin', 'get_image_gallery_pro_page_function');
 }
 
-Function image_gallery_settings_page_function() {
+/**
+ * Photo Gallery Settings Page
+ */
+function image_gallery_settings_page_function() {
     //css
     wp_enqueue_style('wl-font-awesome-4', WEBLIZAR_RG_PLUGIN_URL.'css/font-awesome-4.0.3/css/font-awesome.min.css');
     require_once("responsive-gallery-settings.php");
 }
 
+/**
+ * Get Responsive Photo Gallery Pro Plugin Page
+ */
+function get_image_gallery_pro_page_function() {
+    //css
+    wp_enqueue_style('wl-font-awesome-4', WEBLIZAR_RG_PLUGIN_URL.'css/font-awesome-4.0.3/css/font-awesome.min.css');
+    wp_enqueue_style('wl-pricing-table-css', WEBLIZAR_RG_PLUGIN_URL.'css/pricing-table.css');
+    wp_enqueue_style('wl-pricing-table-responsive-css', WEBLIZAR_RG_PLUGIN_URL.'css/pricing-table-responsive.css');
+    wp_enqueue_style('wl-boot-strap-responsive-min-2-3-css', WEBLIZAR_RG_PLUGIN_URL.'css/bootstrap-responsive.min.2.3.css');
+    require_once("get-responsive-gallery-pro.php");
+}
+
 
 /**
- * Responsive Gallery Short Code [WRG ]
+ * Responsive Gallery Short Code [WRG]
  */
 require_once("responsive-gallery-short-code.php");
