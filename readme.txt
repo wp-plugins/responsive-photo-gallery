@@ -34,6 +34,7 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 **Free Plugin Demo:** [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
  
 **Responsive Photo Gallery Pro Features**
+
 * Responsive Gallery
 * Admin Gallery Dashboard
 * 8 Types of Animation Effect
