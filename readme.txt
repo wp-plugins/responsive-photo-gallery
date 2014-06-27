@@ -8,14 +8,13 @@ Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-
 Responsive Photo Gallery allow you to add unlimited images to gallery, integrated with light box using fade animation.
 
 == Description ==
 
 Responsive Photo Gallery is based on bootstrap framework. Add unlimited images on your sites. Responsive Photo Gallery is provide fade animation, light box image preview and two gallery layout with various fonts. It's also provide isotope effect to adjust your image size according to screen resolution.
 
-Using **[WRG]** shortcode, you can publish your image gallery into any Page or Post in your WordPress sites.
+Using **[WRG]** shortcode, you can publish image or photo gallery into any Page or Post in your WordPress sites.
 
 **Features**
 
@@ -33,6 +32,7 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 
 **Free Plugin Demo:** [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
  
+
 **Responsive Photo Gallery Pro Features**
 
 * Responsive Gallery
@@ -56,6 +56,55 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 
 **Upgrade To Pro:** [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
 
+== Installation ==
+
+1. Upload the entire **responsive-photo-gallery** folder to the **/wp-content/plugins/** directory.
+2. Activate the plugin through the **Plugins** menu in WordPress admin.
+3. Create new gallery, Use **[WRG]** shortcode to publish image gallery on any page or post.
+
+== Screenshots ==
+
+1. Gallery Preview
+2. Gallery Preview on Image Hover
+3. Gallery Image Light Box
+4. Add New Gallery
+5. Insert Images into Gallery
+6. Gallery Settings
+
+== Changelog ==
+
+For more information, see Weblizar(http://wwww.weblizar.com/).
+
+= 0.4 =
+* New: Gallery will load according placed into post content
+
+= 0.3 =
+* New: Translation Ready
+
+= 0.2 =
+* Bug: Typo fixed
+
+= 0.1 =
+* New: Add Gallery
+* New: Gallery Settings
+* New: Bootstrap Light Box
+* New: Gallery Shortcode [WRG]
+
+
+== Upgrade Notice ==
+
+= 0.4 =
+Upgrade using WordPress admin dashboard Or deactivate and delete previous plugin, Download version 0.4 plugin form WordPress upload, install and activate.
+
+= 0.3 =
+Upgrade using WordPress admin dashboard Or deactivate and delete previous plugin, Download version 0.3 plugin form WordPress upload, install and activate.
+
+= 0.2 =
+Upgrade using WordPress admin dashboard Or deactivate and delete previous plugin, Download version 0.2 plugin form WordPress upload, install and activate.
+
+= 0.1 =
+Starter version no upgrade is required.
+
 == Features ==
 
 * Responsive Gallery
@@ -75,50 +124,17 @@ Using **[WRG]** shortcode, you can publish your image gallery into any Page or P
 
 = Docs & Support =
 
-You can find [docs](http://weblizar.com/), [FAQ](http://www.weblizar.com/faq/) and more detailed information about Twitter Tweets on [Weblizar](http://www.weblizar.com). If you were unable to find the answer to your question on the FAQ or in any of the documentation, you should check the [support forum](http://weblizar.com/) on WordPress.org.
+You can find [docs](http://weblizar.com/documentation/plugins/responsive-photo-gallery-pro/), [FAQ](http://www.weblizar.com/faq/) and more detailed information about Twitter Tweets on [Weblizar](http://www.weblizar.com). If you were unable to find the answer to your question on the FAQ or in any of the documentation, you should check the [support forum](http://wordpress.org/support/plugin/responsive-photo-gallery) on WordPress.org.
 
 = We Need Your Support =
 
-It is really hard to continue development and support for this free plugin without contributions from users like you. If you are enjoying using our Testimonial plugin and find it useful, then please consider [__Making a Donation__](http://www.weblizar.com). Your donation will help us to encourage and support the plugin's continued development and better user support.
+It is really hard to continue development and support for this free plugin without contributions from users like you. If you are enjoying using our Responsive Photo Gallery plugin and find it useful, then please consider [__Making a Donation__](http://www.weblizar.com). Your donation will help us to encourage and support the plugin's continued development and better user support.
 
 = Translators =
 
-Please contribute to translate our plugin.  Contact at `lizarweb (at) gmail (dot) com`.
-
-== Installation ==
-
-1. Upload the entire **responsive-photo-gallery** folder to the **/wp-content/plugins/** directory.
-2. Activate the plugin through the **Plugins** menu in WordPress admin.
-3. Create new gallery, Use **[WRG]** shortcode to publish image gallery on any page or post.
+Please contribute to translate our plugin.  Contact at `contact (at) weblizar (dot) com`.
 
 == Frequently Asked Questions ==
 
-Please use WordPress support forum to ask any query regarding any issue.
+Please use WordPress [support forum](http://wordpress.org/support/plugin/responsive-photo-gallery) to ask any query regarding any issue.
 
-== Screenshots ==
-
-1. Gallery Preview
-2. Gallery Preview on Image Hover
-3. Gallery Image Light Box
-4. Add New Gallery
-5. Insert Images into Gallery
-6. Gallery Settings
-
-== Changelog ==
-
-For more information, see Weblizar(http://wwww.weblizar.com/).
-
-= 0.4 =
-* New: Gallery will load according to post content
-
-= 0.3 =
-* New: Translation Ready
-
-= 0.2 =
-* Bug: Typo fixed
-
-= 0.1 =
-* New: Add Gallery
-* New: Gallery Settings
-* New: Bootstrap Light Box
-* New: Gallery Shortcode [WRG]
