@@ -238,12 +238,6 @@ function WeblizarResponsiveGalleryShortCodeDetect() {
 
             wp_enqueue_style('wl-font-awesome-4', WEBLIZAR_RG_PLUGIN_URL.'css/font-awesome-4.0.3/css/font-awesome.min.css');
 
-            /**
-             * envira & isotope js
-             */
-            wp_enqueue_script( 'envira-js', WEBLIZAR_RG_PLUGIN_URL.'js/envira.js', array(), '1.5.26', true );
-            wp_enqueue_script( 'isotope-js', WEBLIZAR_RG_PLUGIN_URL.'js/gl_isotope.js', array(), '', true );
-
             break;
         } //end of if
     } //end of foreach
