@@ -4,7 +4,7 @@ Donate link: http://www.weblizar.com/responsive-photo-gallery/
 Tags: responsive gallery, add album, add gallery, add pictures, album, gallery, gallery image, image, multiple pictures, photo, photo album, photo gallery, pictures, upload images, website gallery, albums, best gallery plugin, best portfolio plugin, flash, foto, fotoalbum, gallery album, gallery bank, gallery image, gallery wordpress plugin, grid gallery, image album, image slider, images, lightbox, links, media, modal, photo albums, photo gallery, Photo Slider, photoalbum, photogallery, photos, picture, pictures, plugin, portfolio, portfolio gallery, portfolio wordpress plugin, Post, posts, responsive gallery, seo image, sidebar, slideshow, thumbnails, videos, website gallery, widget, wordpress gallery plugin, wordpress portfolio plugin, wp gallery, wp gallery plugin
 Requires at least: 3.3
 Tested up to: 3.9.1
-Stable tag: 0.6
+Stable tag: 0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
