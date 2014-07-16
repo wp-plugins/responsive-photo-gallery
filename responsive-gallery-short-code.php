@@ -120,7 +120,7 @@ function image_gallery_premium_short_code() {
         <?php $post_id = get_the_ID(); ?>
 
             <div style="font-weight: bolder;padding-bottom:20px;border-bottom:2px solid #cccccc;margin-bottom: 20px "><?php echo ucwords(get_the_title($post_id)); ?></div>
-    <div class="gallery1">
+    <div class="">
         <?php
 
             /**
