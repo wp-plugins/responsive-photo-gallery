@@ -8,18 +8,18 @@ Stable tag: 0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Responsive Photo Gallery allow you to add unlimited images to gallery, integrated with light box using fade animation.
+Responsive Photo Gallery Allow You Add Unlimited Images To Photo Gallery Integrated With Light Box Preview Using Fade Animation Effect
 
 == Description ==
 
-Responsive Photo Gallery is based on bootstrap framework. Add unlimited images on your sites. Responsive Photo Gallery is provide fade animation, light box image preview and two gallery layout with various fonts. It's also provide isotope effect to adjust your image size according to screen resolution.
+Responsive Photo Gallery is based on bootstrap framework. You can Add unlimited images on your blog site. Responsive Photo Gallery is provide fade animation, light box image preview and two gallery layout with various fonts. It's also provide isotope effect to adjust your image size according to screen resolution.
 
 Using **[WRG]** shortcode, you can publish image or photo gallery into any Page or Post in your WordPress sites.
 
 **Features**
 
 * Responsive Gallery
-* Admin Gallery Dashboard
+* Simple & Very Easy Admin Gallery Dashboard
 * Fade Animation Effect
 * Two Design Layout
 * Two Types of Color Scheme
@@ -36,7 +36,7 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 **Responsive Photo Gallery Pro Features**
 
 * Responsive Gallery
-* Admin Gallery Dashboard
+* Simple & Very Easy Admin Gallery Dashboard
 * 8 Types of Animation Effect
 * 5 Types of Gallery design layout
 * Unlimited Colors Scheme with opacity Effects
@@ -52,9 +52,11 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 * Multilingual Translation Ready
 * And many more..
 
-**Pro Plugin Demo:** [Responsive Photo Gallery Pro](http://weblizar.com/demo/plugins/premium/responsive-photo-gallery-pro/)
+**Try Responsive Photo Gallery Pro:** [Live Demo](http://demo.weblizar.com/responsive-photo-gallery-pro/)
 
-**Upgrade To Pro:** [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
+**Try Responsive Photo Gallery Pro:** [Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
+
+**Upgrade To:** [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
 
 == Installation ==
 
@@ -64,16 +66,27 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 
 == Screenshots ==
 
-1. Gallery Preview
+1. Gallery Preview on Site
 2. Gallery Preview on Image Hover
-3. Gallery Image Light Box
-4. Add New Gallery
+3. Gallery Image 1 Preview Light Box
+4. Gallery Image 2 Preview Light Box
 5. Insert Images into Gallery
-6. Gallery Settings
+6. Add Images into Gallery 1
+7. Add Images into Gallery 2
+8. Gallery Settings
 
 == Changelog ==
 
 For more information, see Weblizar(http://wwww.weblizar.com/).
+
+= 0.7 =
+* Bug: remove js error.
+
+= 0.6 =
+* Bug: Campatible with all weblizar.com free and premium themes
+
+= 0.5 =
+* New: Very easiest and simple responsive photo gallery dashboard
 
 = 0.4 =
 * New: Gallery will load according placed into post content
@@ -92,6 +105,10 @@ For more information, see Weblizar(http://wwww.weblizar.com/).
 
 
 == Upgrade Notice ==
+
+= 0.5 =
+Upgrade using WordPress admin dashboard Or deactivate and delete previous plugin, Download version 0.5 plugin form WordPress upload, install and activate.
+Due to updated admin dashboard you needs re-create photo gallery once only. We made very and simple photo gallery creating dashboard for the users.
 
 = 0.4 =
 Upgrade using WordPress admin dashboard Or deactivate and delete previous plugin, Download version 0.4 plugin form WordPress upload, install and activate.
