@@ -80,7 +80,7 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 For more information, see Weblizar(http://wwww.weblizar.com/).
 
 = 0.7 =
-* Bug: remove js error.
+* Remove Isotope
 
 = 0.6 =
 * Bug: Campatible with all weblizar.com free and premium themes
