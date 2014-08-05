@@ -99,22 +99,22 @@ For more information, see Weblizar(http://wwww.weblizar.com/).
 = Version 0.7 17-Jul-2014 =
 * Remove Isotope
 
-= Version 0.6 10-Jul-2014=
+= Version 0.6 10-Jul-2014 =
 * Bug: Campatible with all weblizar.com free and premium themes
 
-= Version 0.5 03-Jul-2014=
+= Version 0.5 03-Jul-2014 =
 * New: Very easiest and simple responsive photo gallery dashboard
 
-= Version 0.4 03-Jul-2014=
+= Version 0.4 03-Jul-2014 =
 * New: Gallery will load according placed into post content
 
-= Version 0.3 21-Jun-2014=
+= Version 0.3 21-Jun-2014 =
 * New: Translation Ready
 
-= Version 0.2 08-Jun-2014=
+= Version 0.2 08-Jun-2014 =
 * Bug: Typo fixed
 
-= Version 0.1 01-Jun-2014=
+= Version 0.1 01-Jun-2014 =
 * New: Add Gallery
 * New: Gallery Settings
 * New: Bootstrap Light Box
