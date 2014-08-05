@@ -1,10 +1,10 @@
 === Responsive Photo Gallery ===
 Contributors: weblizar
 Donate link: http://www.weblizar.com/responsive-photo-gallery/
-Tags: responsive gallery, add album, add gallery, add pictures, album, gallery, gallery image, image, multiple pictures, photo, photo album, photo gallery, pictures, upload images, website gallery, albums, best gallery plugin, best portfolio plugin, flash, foto, fotoalbum, gallery album, gallery bank, gallery image, gallery wordpress plugin, grid gallery, image album, image slider, images, lightbox, links, media, modal, photo albums, photo gallery, Photo Slider, photoalbum, photogallery, photos, picture, pictures, plugin, portfolio, portfolio gallery, portfolio wordpress plugin, Post, posts, responsive gallery, seo image, sidebar, slideshow, thumbnails, videos, website gallery, widget, wordpress gallery plugin, wordpress portfolio plugin, wp gallery, wp gallery plugin
+Tags: responsive gallery, add album, add gallery, add pictures, album, gallery, gallery image, image, multiple pictures, photo, photo album, photo gallery, pictures, upload images, website gallery, albums, best gallery plugin, best portfolio plugin, flash, foto, fotoalbum, gallery album, gallery bank, gallery image, gallery wordpress plugin, grid gallery, image album, image slider, images, lightbox, links, media, modal, photo albums, photo gallery, Photo Slider, photoalbum, photogallery, photos, picture, pictures, plugin, portfolio, portfolio gallery, portfolio wordpress plugin, Post, posts, responsive gallery, seo image, sidebar, slideshow, thumbnails, videos, website gallery, widget, wordpress gallery plugin, wordpress portfolio plugin, wp gallery, wp gallery plugin, carousel, categories, category, content slider, custom, custom fields, dashboard, FAQ, FAQ widget, filterable gallery, filterable portfolio,image-size,two-column,three-column, jpeg, jpg, jquery gallery, jquery portfolio, labels, nextgen, nextgen gallery, page, pages, , responsive slideshow, screenshot, screenshots, seo, shortcode, Simple gallery, slide, slide show, slider, slider plugin, slider widget, sliders, slides, slideshow, slideshow manager, slideshow plugin, sortable portfolio, thumbnails, thumbs, vertical slides, view images, visual items, web designer, website gallery, widget, widget gallery, widget slider, widget slideshow, widgets, wordpress faq, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wordpress portfolio, wordpress portfolio plugin, wordpress slider, wordpress slideshow, wp gallery, wp gallery plugins, wp slider
 Requires at least: 3.3
 Tested up to: 3.9.1
-Stable tag: 0.7
+Stable tag: 0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 **Free Plugin Demo:** [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
  
 
-**Responsive Photo Gallery Pro Features**
+### Responsive Photo Gallery Pro Features:
 
 * Responsive Gallery
 * Simple & Very Easy Admin Gallery Dashboard
@@ -41,10 +41,20 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 * 5 Types of Gallery design layout
 * Unlimited Colors Scheme with opacity Effects
 * 520 Goggle Font Styles integrated with gallery 
+* Multiple Image Uploader
+* Drag and Drop image Position
+* Gallery Shortcode button on page or post.
 * Integrated with Isotope Effect 
 * Choose Unlimited Font Awesome Icon
-* Two Types Of light box integrated with gallery
+* 4 Types Of light box integrated with gallery
+* Unlimited Font icon Choices
+* Each Gallery has unique Settings
+* Customized Font Icon Size
+* Open gallery lightbox on click image or icon
+* Hide And Show gallery title
 * Gallery Categorized Display
+* Google Fonts
+* Grid and masonry layout
 * Add Unlimited Images into Gallery
 * Each gallery associated with unique shortcode.
 * Retina Ready
@@ -52,11 +62,11 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 * Multilingual Translation Ready
 * And many more..
 
-**Try Responsive Photo Gallery Pro:** [Live Demo](http://demo.weblizar.com/responsive-photo-gallery-pro/)
+### Try Responsive Photo Gallery Pro: [Live Demo](http://demo.weblizar.com/responsive-photo-gallery-pro/)
 
-**Try Responsive Photo Gallery Pro:** [Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
+### Try Responsive Photo Gallery Pro:** [Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
 
-**Upgrade To:** [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
+### Upgrade To: [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
 
 == Installation ==
 
@@ -79,25 +89,32 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 
 For more information, see Weblizar(http://wwww.weblizar.com/).
 
-= 0.7 =
+= Version 0.8 06-Aug-2014 =
+* Hide or show gallery title
+* Resolved Some Design issue
+* Remove Post view button
+* Improve Design 
+* Remove some small js error
+
+= Version 0.7 17-Jul-2014 =
 * Remove Isotope
 
-= 0.6 =
+= Version 0.6 10-Jul-2014=
 * Bug: Campatible with all weblizar.com free and premium themes
 
-= 0.5 =
+= Version 0.5 03-Jul-2014=
 * New: Very easiest and simple responsive photo gallery dashboard
 
-= 0.4 =
+= Version 0.4 03-Jul-2014=
 * New: Gallery will load according placed into post content
 
-= 0.3 =
+= Version 0.3 21-Jun-2014=
 * New: Translation Ready
 
-= 0.2 =
+= Version 0.2 08-Jun-2014=
 * Bug: Typo fixed
 
-= 0.1 =
+= Version 0.1 01-Jun-2014=
 * New: Add Gallery
 * New: Gallery Settings
 * New: Bootstrap Light Box

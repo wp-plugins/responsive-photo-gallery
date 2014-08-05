@@ -9,68 +9,81 @@
         $WL_Hover_Color         = $WL_RG_Settings['WL_Hover_Color'];
         $WL_Font_Style          = $WL_RG_Settings['WL_Font_Style'];
         $WL_Image_View_Icon     = $WL_RG_Settings['WL_Image_View_Icon'];
+		$WL_Gallery_Title       =  $WL_RG_Settings['WL_Gallery_Title'];
+		
     } else {
         $WL_Hover_Animation     = "fade";
         $WL_Gallery_Layout      = "col-md-6";
         $WL_Hover_Color         = "#74C9BE";
         $WL_Font_Style          = "Arial";
         $WL_Image_View_Icon     = "fa-picture-o";
+		$WL_Gallery_Title		= "yes";
     }
     //print_r($WL_RG_Settings);
 ?>
 
-<h2>Responsive Gallery Settings</h2>
+<h2><?php _e("Responsive Gallery Settings", WEBLIZAR_RPG_TEXT_DOMAIN); ?></h2>
 <form action="?post_type=responsive-gallery&page=image-gallery-settings" method="post">
     <input type="hidden" id="wl_action" name="wl_action" value="wl-save-settings">
     <table class="form-table">
         <tbody>
             <tr>
-                <th scope="row"><label>Image Hover Animation</label></th>
+                <th scope="row"><label><?php _e("Image Hover Animation", WEBLIZAR_RPG_TEXT_DOMAIN); ?></label></th>
                 <td>
                     <select name="wl-hover-animation" id="wl-hover-animation">
                         <optgroup label="Select Animation">
-                            <option value="fade" <?php if($WL_Hover_Animation == 'fade') echo "selected=selected"; ?>>Fade</option>
+                            <option value="fade" <?php if($WL_Hover_Animation == 'fade') echo "selected=selected"; ?>><?php _e("Fade", WEBLIZAR_RPG_TEXT_DOMAIN); ?></option>
                             <!--<option value="stroke" <?php /*if($WL_Hover_Animation == 'stroke') echo "selected=selected"; */?>>Stroke</option>-->
                         </optgroup>
                     </select>
-                    <p class="description">Choose an animation effect apply on mouse hover.</p>
+                    <p class="description"><?php _e("Choose an animation effect apply on mouse hover.", WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
                 </td>
             </tr>
 
             <tr>
-                <th scope="row"><label>Gallery Layout</label></th>
+                <th scope="row"><label><?php _e("Gallery Layout", WEBLIZAR_RPG_TEXT_DOMAIN); ?></label></th>
                 <td>
                     <select name="wl-gallery-layout" id="wl-gallery-layout">
                         <optgroup label="Select Gallery Layout">
-                            <option value="col-md-6" <?php if($WL_Gallery_Layout == 'col-md-6') echo "selected=selected"; ?>>Two Column</option>
-                            <option value="col-md-4" <?php if($WL_Gallery_Layout == 'col-md-4') echo "selected=selected"; ?>>Three Column</option>
+                            <option value="col-md-6" <?php if($WL_Gallery_Layout == 'col-md-6') echo "selected=selected"; ?>><?php _e("Two Column", WEBLIZAR_RPG_TEXT_DOMAIN); ?></option>
+                            <option value="col-md-4" <?php if($WL_Gallery_Layout == 'col-md-4') echo "selected=selected"; ?>><?php _e("Three Column", WEBLIZAR_RPG_TEXT_DOMAIN); ?></option>
                         </optgroup>
                     </select>
-                    <p class="description">Choose a column layout for image gallery.</p>
+                    <p class="description"><?php _e("Choose a column layout for image gallery.", WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
                 </td>
             </tr>
-
-            <tr>
-                <th scope="row"><label>Hover Color</label></th>
+			
+			<tr>
+                <th scope="row"><label><?php _e("Display Gallery Title", WEBLIZAR_RPG_TEXT_DOMAIN); ?></label></th>
                 <td>
-                    <input type="radio" name="wl-hover-color" id="wl-hover-color" value="#74C9BE" <?php if($WL_Hover_Color == '#74C9BE' ) { echo "checked"; } ?>> <span style="color: #74C9BE; font-size: large; font-weight: bolder;"">Color 1</span>
-                    <input type="radio" name="wl-hover-color" id="wl-hover-color" value="#31A3DD" <?php if($WL_Hover_Color == '#31A3DD' ) { echo "checked"; } ?>> <span style="color: #31A3DD; font-size: large; font-weight: bolder;">Color 1</span>
+                    <input type="radio" name="wl-gallery-title" id="wl-gallery-title" value="yes" <?php if($WL_Gallery_Title == 'yes' ) { echo "checked"; } ?>> Yes
+                    <input type="radio" name="wl-gallery-title" id="wl-gallery-title" value="no" <?php if($WL_Gallery_Title == 'no' ) { echo "checked"; } ?>> No
 
-                    <p class="description">Choose a color apply on mouse hover.</p>
+                    <p class="description"><?php _e("Select yes if you want show gallery title .", WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
+                </td>
+            </tr>
+			
+            <tr>
+                <th scope="row"><label><?php _e("Hover Color", WEBLIZAR_RPG_TEXT_DOMAIN); ?></label></th>
+                <td>
+                    <input type="radio" name="wl-hover-color" id="wl-hover-color" value="#74C9BE" <?php if($WL_Hover_Color == '#74C9BE' ) { echo "checked"; } ?>> <span style="color: #74C9BE; font-size: large; font-weight: bolder;"><?php _e("Color 1", WEBLIZAR_RPG_TEXT_DOMAIN); ?></span>
+                    <input type="radio" name="wl-hover-color" id="wl-hover-color" value="#31A3DD" <?php if($WL_Hover_Color == '#31A3DD' ) { echo "checked"; } ?>> <span style="color: #31A3DD; font-size: large; font-weight: bolder;"><?php _e("Color 2", WEBLIZAR_RPG_TEXT_DOMAIN); ?></span>
+
+                    <p class="description"><?php _e("Choose a color apply on mouse hover.", WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
                 </td>
             </tr>
 
             <tr>
-                <th scope="row"><label>Image View Icon</label></th>
+                <th scope="row"><label><?php _e("Image View Icon", WEBLIZAR_RPG_TEXT_DOMAIN); ?></label></th>
                 <td>
                     <input type="radio" name="wl-image-view-icon" id="wl-image-view-icon" value="fa-picture-o"  <?php if($WL_Image_View_Icon == 'fa-picture-o' ) { echo "checked"; } ?>> <i class="fa fa-picture-o fa-2x"></i>
                     <input type="radio" name="wl-image-view-icon" id="wl-image-view-icon" value="fa-camera" <?php if($WL_Image_View_Icon == 'fa-camera' ) { echo "checked"; } ?>> <i class="fa fa-camera fa-2x"></i>
-                    <p class="description">Choose image view icon.</p>
+                    <p class="description"><?php _e("Choose image view icon.", WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
                 </td>
             </tr>
 
             <tr>
-                <th scope="row"><label>Caption Font Style</label></th>
+                <th scope="row"><label><?php _e("Caption Font Style", WEBLIZAR_RPG_TEXT_DOMAIN); ?></label></th>
                 <td>
                     <select  name="wl-font-style" class="standard-dropdown" id="wl-font-style">
                         <optgroup label="Default Fonts">
@@ -93,7 +106,7 @@
                             <option value="_verdana"        <?php if($WL_Font_Style == '_verdana' ) { echo "selected"; } ?>>Verdana</option>
                         </optgroup>
                     </select>
-                    <p class="description">Choose a caption font style.</p>
+                    <p class="description"><?php _e("Choose a caption font style.", WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
                 </td>
             </tr>
 
@@ -102,15 +115,60 @@
         </tbody>
     </table>
     <p class="submit">
-        <input type="submit" value="Save Changes" class="button button-primary" id="submit" name="submit">
+        <input type="submit" value="<?php _e("Save Changes", WEBLIZAR_RPG_TEXT_DOMAIN); ?>" class="button button-primary" id="submit" name="submit">
     </p>
 </form>
+
+<div class="plan-name" style="margin-top:40px;">
+	<h2 style="border-top: 5px solid #f9f9f9;padding-top: 20px;">Responsive Photo Gallery Pro</h2>
+</div>
+<div class="purchase_btn_div" style="margin-top:20px;">
+	<a href="http://demo.weblizar.com/responsive-photo-gallery-pro/" target="_new" class="button button-hero">Try Live Demo</a>
+	<a href="http://demo.weblizar.com/responsive-photo-gallery-admin-demo/" target="_new" class="button button-hero">Try Admin Demo</a>
+	<a href="http://weblizar.com/plugins/responsive-photo-gallery-pro/" target="_new" class="button button-primary button-hero">Upgrade To Pro</a>
+</div>
+<div class="plan-name" style="margin-top:40px;text-align: left;">
+        <h2 style="font-weight: bold;
+font-size: 36px;
+padding-top: 30px;
+padding-bottom: 10px;">Responsive photo Gallery Pro Screenshots</h2>
+<h6 style="
+font-size: 22px;
+padding-top: 10px;
+padding-bottom: 10px;">Get All Lightboxs in Responsive Photo Gallery Pro only in 10$</h6>
+    </div>
+	<!-- SLIDER-INTRO-->
+				<!--===============================================================-->
+				<div class="col-sm-6 col-xs-4" style="width:49%;display:inline-block">
+					<h2 style="font-weight: bold;font-size: 26px;padding-top: 20px;padding-bottom: 20px; text-align:center">Nivo Lightbox</h2>
+					<img class="img-responsive" style="border: 1px solid #e3e3e3;
+background: #f7f7f7;padding:10px;width:100%" src="http://weblizar.com/wp-content/themes/home-theme/images/lightbox/nivo.jpg" alt=""/>
+				</div>
+				<div class="col-sm-6 col-xs-4" style="width:49%;display:inline-block" >
+					<h2 style="font-weight: bold;font-size: 26px;padding-top: 20px;padding-bottom: 20px; text-align:center">Photobox</h2>
+					<img style="border: 1px solid #e3e3e3;
+background: #f7f7f7;padding:10px;width:100%" class="img-responsive" src="http://weblizar.com/wp-content/themes/home-theme/images/lightbox/photobox.jpg" alt=""/>
+				</div>
+				<div class="col-sm-6 col-xs-4" style="width:49%;display:inline-block">
+					<h2 style="font-weight: bold;font-size: 26px;padding-top: 20px;padding-bottom: 20px; text-align:center">Pretty Photo</h2>
+					<img style="border: 1px solid #e3e3e3;
+background: #f7f7f7;padding:10px;width:100%" class="img-responsive" src="http://weblizar.com/wp-content/themes/home-theme/images/lightbox/prettyphoto.jpg" alt=""/>
+				</div>
+				
+				<div class="col-sm-6 col-xs-4" style="width:49%;display:inline-block">
+					<h2 style="font-weight: bold;font-size: 26px;padding-top: 20px;padding-bottom: 20px; text-align:center">Swipe Box</h2>
+					<img style="border: 1px solid #e3e3e3;
+background: #f7f7f7;padding:10px;width:100%" class="img-responsive" src="http://weblizar.com/wp-content/themes/home-theme/images/lightbox/swipebox.jpg" alt=""/>
+				</div>
+		
+					
+	
+	
 
 <?php
 //print_r($_POST);
 if(isset($_POST['wl_action'])) {
     $Action = $_POST['wl_action'];
-
     //save settings
     if($Action == "wl-save-settings") {
         //print_r($_POST);
@@ -120,6 +178,7 @@ if(isset($_POST['wl_action'])) {
         $WL_Hover_Color         = $_POST['wl-hover-color'];
         $WL_Font_Style          = $_POST['wl-font-style'];
         $WL_Image_View_Icon     = $_POST['wl-image-view-icon'];
+		$WL_Gallery_Title		= $_POST['wl-gallery-title'];
 
         $SettingsArray = serialize( array(
             'WL_Hover_Animation' => $WL_Hover_Animation,
@@ -128,6 +187,7 @@ if(isset($_POST['wl_action'])) {
             'WL_Hover_Color_Opacity' => 1,
             'WL_Font_Style' => $WL_Font_Style,
             'WL_Image_View_Icon' => $WL_Image_View_Icon,
+			'WL_Gallery_Title' =>	$WL_Gallery_Title		
         ) );
 
         update_option("WL_IGP_Settings", $SettingsArray);
