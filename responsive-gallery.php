@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 0.8
+ * Version: 0.9
  * Description: Create and display various animated image gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
@@ -59,18 +59,18 @@ function ResponsiveGallery() {
         'labels'              => $labels,
         'supports'            => array( 'title', '', '', '', '', '', '', '', '', '', '', ),
         //'taxonomies'          => array( 'category', 'post_tag' ),
-        'hierarchical'        => true,
-        'public'              => true,
+         'hierarchical'        => false,
+        'public'              => false,
         'show_ui'             => true,
         'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
+        'show_in_nav_menus'   => false,
+        'show_in_admin_bar'   => false,
         'menu_position'       => 5,
         'menu_icon'           => 'dashicons-format-gallery',
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
-        'publicly_queryable'  => true,
+        'publicly_queryable'  => false,
         'capability_type'     => 'page',
     );
     register_post_type( 'responsive-gallery', $args );
@@ -88,7 +88,10 @@ add_action('admin_init','ResponsivePhotoGallery_init');
 function ResponsivePhotoGallery_init() {
     add_meta_box('ResponsivePhotoGallery_meta', __('Add New Images', WEBLIZAR_RPG_TEXT_DOMAIN), 'responsive_photo_gallery_function', 'responsive-gallery', 'normal', 'high');
     add_action('save_post','responsive_photo_gallery_meta_save');
-    wp_enqueue_script('theme-preview');
+	add_meta_box(__('Upgrade To Pro Version', WEBLIZAR_LBS_TEXT_DOMAIN) , __('Upgrade To Pro Version', WEBLIZAR_LBS_TEXT_DOMAIN), 'wrg_upgrade_to_pro_function', 'responsive-gallery', 'side', 'low');
+    add_meta_box(__('Pro Features', WEBLIZAR_LBS_TEXT_DOMAIN) , __('Pro Features', WEBLIZAR_LBS_TEXT_DOMAIN), 'wrg_pro_features', 'responsive-gallery', 'side', 'low');
+	   
+   wp_enqueue_script('theme-preview');
     wp_enqueue_script('rpg-media-uploads',WEBLIZAR_RG_PLUGIN_URL.'js/rpg-media-upload-script.js',array('media-upload','thickbox','jquery'));
     wp_enqueue_style('dashboard');
     wp_enqueue_style('rpg-meta-css', WEBLIZAR_RG_PLUGIN_URL.'css/rpg-meta.css');
@@ -103,6 +106,11 @@ function responsive_photo_gallery_function() {
     $TotalImages =  get_post_meta( get_the_ID(), 'rpg_total_images_count', true );
     $i = 1;
     ?>
+	<style>
+		#titlediv #title {
+		margin-bottom:15px;
+		}
+	</style>
     <input type="hidden" id="count_total" name="count_total" value="<?php if($TotalImages==0){ echo 0; } else { echo $TotalImages; } ?>"/>
     <div style="clear:left;"></div>
 
@@ -178,7 +186,45 @@ function responsive_photo_gallery_function() {
     </script>
     <?php
 }
+function wrg_upgrade_to_pro_function(){
+?>
+<div class="upgrade-to-pro-demo" style="text-align:center;margin-bottom:10px;margin-top:10px;">
+	<a href="http://demo.weblizar.com/responsive-photo-gallery-pro/"  target="_new" class="button button-primary button-hero">View Live Demo</a>
+</div>
+<div class="upgrade-to-pro-admin-demo" style="text-align:center;margin-bottom:10px;">
+	<a href="http://demo.weblizar.com/responsive-photo-gallery-admin-demo/" target="_new" class="button button-primary button-hero">View Admin Demo</a>
+</div>
+<div class="upgrade-to-pro" style="text-align:center;margin-bottom:10px;">
+	<a href="http://weblizar.com/plugins/responsive-photo-gallery-pro/" target="_new" class="button button-primary button-hero">Upgarde To Pro</a>
+</div>
+<?php
+}
 
+function wrg_pro_features(){
+	?>
+
+	<ul style="">
+				<li class="plan-feature">Responsive Design</li>
+				<li class="plan-feature">Gallery Layout</li>
+				<li class="plan-feature">Unlimited Hover Color</li>
+				<li class="plan-feature">10 Types of Hover Color Opacity</li>
+				<li class="plan-feature">All Gallery Shortcode</li>
+				<li class="plan-feature">Each Gallery has Unique Shortcode</li>
+				<li class="plan-feature">8 Types of Hover Animation</li>
+				<li class="plan-feature">5 Types of Gallery Design Layout</li>
+				<li class="plan-feature">500+ of Font Style</li>
+				<li class="plan-feature">4 types Of Lightbox Integrated</li>
+				<li class="plan-feature">Drag and Drop image Position</li>
+			  <li class="plan-feature">Multiple Image uploader</li>
+			  <li class="plan-feature">Shortcode Button on post or page</li>
+			  <li class="plan-feature">Unique settings for each gallery</li>
+			  <li class="plan-feature">Hide/Show gallery Title and label</li>
+			  <li class="plan-feature">Font icon Customization</li>
+			  <li class="plan-feature">Google Fonts</li>
+			  <li class="plan-feature">Isotope/Masonry Effects</li>
+			</ul>
+	<?php 
+} 
 /**
  * Save All Photo Gallery Images
  */
@@ -252,7 +298,7 @@ add_action('admin_menu' , 'WRG_SettingsPage');
 
 function WRG_SettingsPage() {
     add_submenu_page('edit.php?post_type=responsive-gallery', __('Settings', WEBLIZAR_RPG_TEXT_DOMAIN), __('Settings', WEBLIZAR_RPG_TEXT_DOMAIN), 'administrator', 'image-gallery-settings', 'image_gallery_settings_page_function');
-    add_submenu_page('edit.php?post_type=responsive-gallery', 'Pro Features', 'Pro Features', 'administrator', 'get-image-gallery-pro-plugin', 'get_image_gallery_pro_page_function');
+    add_submenu_page('edit.php?post_type=responsive-gallery', 'Pro Screenshots', 'Pro Screenshots', 'administrator', 'get-image-gallery-pro-plugin', 'get_image_gallery_pro_page_function');
 }
 
 /**

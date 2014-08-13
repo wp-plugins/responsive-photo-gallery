@@ -59,7 +59,7 @@ background: #f7f7f7;padding:10px" class="img-responsive" src="http://weblizar.co
         <h2 style="font-weight: bold;
 font-size: 36px;
 padding-top: 10px;
-padding-bottom: 10px;">Responsive Photo Gallery Pro And Free Comparison Table</h2>
+padding-bottom: 10px;">Responsive Photo gallery Pro And Free Comparison Table</h2>
  </div>
 <div class="row-fluid pricing-table pricing-three-column" style="margin-top: 10px;">
 	<div class="col-md-4">
