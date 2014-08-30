@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 0.9
+ * Version: 1.0
  * Description: Create and display various animated image gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
@@ -88,14 +88,61 @@ add_action('admin_init','ResponsivePhotoGallery_init');
 function ResponsivePhotoGallery_init() {
     add_meta_box('ResponsivePhotoGallery_meta', __('Add New Images', WEBLIZAR_RPG_TEXT_DOMAIN), 'responsive_photo_gallery_function', 'responsive-gallery', 'normal', 'high');
     add_action('save_post','responsive_photo_gallery_meta_save');
-	add_meta_box(__('Upgrade To Pro Version', WEBLIZAR_LBS_TEXT_DOMAIN) , __('Upgrade To Pro Version', WEBLIZAR_LBS_TEXT_DOMAIN), 'wrg_upgrade_to_pro_function', 'responsive-gallery', 'side', 'low');
-    add_meta_box(__('Pro Features', WEBLIZAR_LBS_TEXT_DOMAIN) , __('Pro Features', WEBLIZAR_LBS_TEXT_DOMAIN), 'wrg_pro_features', 'responsive-gallery', 'side', 'low');
+	add_meta_box(__('Plugin Shortcode', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Plugin Shortcode', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_plugin_shortcode', 'responsive-gallery', 'side', 'low');
+	add_meta_box(__('Rate us on WordPress', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Rate us on WordPress', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_rate_us_function', 'responsive-gallery', 'side', 'low');
+    add_meta_box(__('Upgrade To Pro Version', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Upgrade To Pro Version', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_upgrade_to_pro_function', 'responsive-gallery', 'side', 'low');
+    
+	add_meta_box(__('Pro Features', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Pro Features', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_pro_features', 'responsive-gallery', 'side', 'low');
 	   
    wp_enqueue_script('theme-preview');
     wp_enqueue_script('rpg-media-uploads',WEBLIZAR_RG_PLUGIN_URL.'js/rpg-media-upload-script.js',array('media-upload','thickbox','jquery'));
     wp_enqueue_style('dashboard');
     wp_enqueue_style('rpg-meta-css', WEBLIZAR_RG_PLUGIN_URL.'css/rpg-meta.css');
     wp_enqueue_style('thickbox');
+}
+
+/**
+plugin shortcode
+**/
+function wrg_plugin_shortcode(){
+?>
+<p>Use below shortcode in any Page/Post to publish your Responsive Photo Gallery</p>
+		<input readonly="readonly" type="text" value="<?php echo "[WRG]"; ?>"> 
+<?php
+} 
+
+/**
+Rate us 
+**/
+
+function wrg_rate_us_function(){
+?>
+<div style="text-align:center">
+<h3>If you like our plugin then please show us some love </h3>
+
+<style>
+.wrg-rate-us span.dashicons{
+width: 30px;
+height: 30px;
+}
+.wrg-rate-us span.dashicons-star-filled:before {
+content: "\f155";
+font-size: 30px;
+}
+</style>
+
+<a class="wrg-rate-us" style="text-align:center; text-decoration: none;font:normal 30px/l;" href="http://wordpress.org/plugins/responsive-photo-gallery/" target="_blank">
+			<span class="dashicons dashicons-star-filled"></span>
+			<span class="dashicons dashicons-star-filled"></span>
+			<span class="dashicons dashicons-star-filled"></span>
+			<span class="dashicons dashicons-star-filled"></span>
+			<span class="dashicons dashicons-star-filled"></span>
+		</a>
+		<div class="upgrade-to-pro-demo" style="text-align:center;margin-bottom:10px;margin-top:10px;">
+	<a href="http://wordpress.org/plugins/responsive-photo-gallery/" target="_new" class="button button-primary button-hero">Click Here</a>
+</div>
+		</div>
+<?php
 }
 
 /**
