@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 1.0
+ * Version: 1.1
  * Description: Create and display various animated image gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
@@ -320,8 +320,6 @@ function WeblizarResponsiveGalleryShortCodeDetect() {
              */
             wp_enqueue_script('jquery');
             wp_enqueue_script('wl-hover-pack-js',WEBLIZAR_RG_PLUGIN_URL.'js/hover-pack.js', array('jquery'));
-            wp_enqueue_script('wl-bootstrap-js',WEBLIZAR_RG_PLUGIN_URL.'js/bootstrap.min.js', array('jquery'));
-
             /**
              * css scripts
              */
@@ -331,6 +329,12 @@ function WeblizarResponsiveGalleryShortCodeDetect() {
             wp_enqueue_style('wl-img-gallery-css', WEBLIZAR_RG_PLUGIN_URL.'css/img-gallery.css');
 
             wp_enqueue_style('wl-font-awesome-4', WEBLIZAR_RG_PLUGIN_URL.'css/font-awesome-4.0.3/css/font-awesome.min.css');
+			/** lightbox
+			css js
+			**/
+			wp_enqueue_script('jquery-rebox',WEBLIZAR_RG_PLUGIN_URL.'js/jquery-rebox.js', array('jquery'));
+
+			wp_enqueue_style('jquery-rebox-css', WEBLIZAR_RG_PLUGIN_URL.'css/jquery-rebox.css');
 
             break;
         } //end of if
@@ -365,7 +369,7 @@ function get_image_gallery_pro_page_function() {
     wp_enqueue_style('wl-font-awesome-4', WEBLIZAR_RG_PLUGIN_URL.'css/font-awesome-4.0.3/css/font-awesome.min.css');
     wp_enqueue_style('wl-pricing-table-css', WEBLIZAR_RG_PLUGIN_URL.'css/pricing-table.css');
     wp_enqueue_style('wl-pricing-table-responsive-css', WEBLIZAR_RG_PLUGIN_URL.'css/pricing-table-responsive.css');
-    wp_enqueue_style('wl-boot-strap-responsive-min-2-3-css', WEBLIZAR_RG_PLUGIN_URL.'css/bootstrap.css');
+    wp_enqueue_style('wl-boot-strap-responsive-min-2-3-css', WEBLIZAR_RG_PLUGIN_URL.'css/bootstrap-admin.css');
     require_once("get-responsive-gallery-pro.php");
 }
 

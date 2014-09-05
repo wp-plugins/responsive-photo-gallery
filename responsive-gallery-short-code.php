@@ -24,27 +24,7 @@ function image_gallery_premium_short_code() {
         $WL_Image_View_Icon     = "fa-picture-o";
 		$WL_Gallery_Title       = "yes";
     }
-	if(!function_exists('hex2rgb')) {
-		function hex2rgb($hex) {
-		   $hex = str_replace("#", "", $hex);
-
-		   if(strlen($hex) == 3) {
-			  $r = hexdec(substr($hex,0,1).substr($hex,0,1));
-			  $g = hexdec(substr($hex,1,1).substr($hex,1,1));
-			  $b = hexdec(substr($hex,2,1).substr($hex,2,1));
-		   } else {
-			  $r = hexdec(substr($hex,0,2));
-			  $g = hexdec(substr($hex,2,2));
-			  $b = hexdec(substr($hex,4,2));
-		   }
-		   $rgb = array($r, $g, $b);
-
-		   return $rgb; // returns an array with the rgb values
-		}
-	}
-    $RGB = hex2rgb($WL_Hover_Color);
-    $HoverColorRGB = implode(", ", $RGB);
-    ?>
+	?>
 
     <script>
         jQuery.browser = {};
@@ -63,43 +43,42 @@ function image_gallery_premium_short_code() {
 		display:none !important;
 	}
     .b-link-fade .b-wrapper, .b-link-fade .b-top-line{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-flow .b-wrapper, .b-link-flow .b-top-line{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-stroke .b-top-line{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-stroke .b-bottom-line{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
 
     .b-link-box .b-top-line{
 
-        border: 16px solid rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        border: 16px solid <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-box .b-bottom-line{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-stripe .b-line{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-apart-horisontal .b-top-line, .b-link-apart-horisontal .b-top-line-up{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
-
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-apart-horisontal .b-bottom-line, .b-link-apart-horisontal .b-bottom-line-up{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-apart-vertical .b-top-line, .b-link-apart-vertical .b-top-line-up{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-apart-vertical .b-bottom-line, .b-link-apart-vertical .b-bottom-line-up{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-diagonal .b-line{
-        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);
+        background: <?php echo $WL_Hover_Color; ?>;
     }
 
     .b-wrapper{
@@ -123,7 +102,7 @@ function image_gallery_premium_short_code() {
 		<div style="display: block; overflow:hidden;">
 			<?php if($WL_Gallery_Title==""){ $WL_Gallery_Title == "yes"; } if($WL_Gallery_Title == "yes") { ?>
 			<!-- gallery title-->
-			<div style="font-weight: bolder; padding-bottom:20px; border-bottom:2px solid #cccccc; margin-bottom: 20px;">
+			<div class="rpg-gal-title" >
 				<?php echo ucwords(get_the_title($post_id)); ?>
 			</div>
 			<?php } ?>
@@ -151,7 +130,7 @@ function image_gallery_premium_short_code() {
 							<div class="b-wrapper">
 								<h2 class="b-from-left b-animate b-delay03"><?php echo ucwords($name); ?></h2>
 								<p class="b-from-right b-animate b-delay03">
-									<a href="#" data-toggle="modal" data-target="#<?php echo $post_id."-".$i; ?>">
+									<a href="<?php echo $url; ?>" title="<?php echo ucwords($name); ?>">
 										<i class="fa <?php echo $WL_Image_View_Icon; ?> fa-2x"></i>
 									</a>
 								</p>
@@ -159,23 +138,22 @@ function image_gallery_premium_short_code() {
 						</div>
 					</div>
 
-					<!-- Modal -->
-					<div class="modal fade" id="<?php echo $post_id."-".$i; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title" id="myModalLabel"><?php echo ucwords($name); ?></h4>
-								</div>
-								<div class="modal-body">
-									<img src="<?php echo $url; ?>" class="gall-img-responsive" alt="<?php echo ucwords($name); ?>">
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal"><?php _e("Close", "weblizar_rpg"); ?></button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<?php
+					<?php if($WL_Gallery_Layout=="col-md-4")
+							{
+								 if($i%3==0){
+								?>
+									<div class="clearfix"></div>
+									<?php
+								}
+							}
+							else{
+							 if($i%2==0){
+								?>
+									<div class="clearfix"></div>
+									<?php
+								}
+							}
+					
 					$i++;
 				}
 				?>
@@ -183,7 +161,10 @@ function image_gallery_premium_short_code() {
 		</div>
     <?php endwhile; ?>
     </div>
-    <hr>
+    
+	<script type="text/javascript">
+		jQuery('.wl-gallery a').rebox();
+	</script>	
     <?php wp_reset_query(); ?>
     <?php
 	return ob_get_clean();

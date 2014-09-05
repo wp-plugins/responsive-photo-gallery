@@ -27,58 +27,22 @@
 	
 }
 
-/* Isotope Animating
- * -------------------------- */
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -ms-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
+.rpg-gal-title{
+	font-weight: bolder;
+	 padding-bottom:20px;
+	 border-bottom:2px solid #f2f2f2;
+	 text-align:center ;
+	 margin-bottom: 20px;
+	 font-size:16px;
 }
-
-.isotope {
-    -webkit-transition-property: height, width;
-    -moz-transition-property: height, width;
-    -ms-transition-property: height, width;
-    -o-transition-property: height, width;
-    transition-property: height, width;
+.clearfix:before,
+.clearfix:after
+ {
+  display: table;
+  content: " ";
 }
-
-.isotope .isotope-item {
-    -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property: -moz-transform, opacity;
-    -ms-transition-property: -ms-transform, opacity;
-    -o-transition-property: -o-transform, opacity;
-    transition-property: transform, opacity;
+.clearfix:after,
+.container:after
+ {
+  clear: both;
 }
-
-/**** disabling Isotope CSS3 transitions ****/
-
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-    -webkit-transition-duration: 0s;
-    -moz-transition-duration: 0s;
-    -ms-transition-duration: 0s;
-    -o-transition-duration: 0s;
-    transition-duration: 0s;
-}
-
-
-/**modal js ***/
-
-.modal {
-position: fixed;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-z-index: 1050;
-display: none;
-overflow: auto;
-overflow-y: auto;
--webkit-overflow-scrolling: touch;
-outline: 0;
