@@ -15,6 +15,7 @@ function image_gallery_premium_short_code() {
         $WL_Font_Style          = $WL_RG_Settings['WL_Font_Style'];
         $WL_Image_View_Icon     = $WL_RG_Settings['WL_Image_View_Icon'];
 		$WL_Gallery_Title       =  $WL_RG_Settings['WL_Gallery_Title'];
+		$WL_Hover_Color_Opacity = $WL_RG_Settings['WL_Hover_Color_Opacity'];
     } else {
 		$WL_Hover_Color_Opacity = 1;
 		$WL_Hover_Animation     = "fade";
@@ -23,7 +24,10 @@ function image_gallery_premium_short_code() {
         $WL_Font_Style          = "Arial";
         $WL_Image_View_Icon     = "fa-picture-o";
 		$WL_Gallery_Title       = "yes";
+		$WL_Hover_Color_Opacity = "1";
     }
+	$RGB = RPGhex2rgbWeblizar($WL_Hover_Color);
+    $HoverColorRGB = implode(", ", $RGB);
 	?>
 
     <script>
@@ -43,16 +47,16 @@ function image_gallery_premium_short_code() {
 		display:none !important;
 	}
     .b-link-fade .b-wrapper, .b-link-fade .b-top-line{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-flow .b-wrapper, .b-link-flow .b-top-line{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-stroke .b-top-line{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-stroke .b-bottom-line{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
 
     .b-link-box .b-top-line{
@@ -60,25 +64,25 @@ function image_gallery_premium_short_code() {
         border: 16px solid <?php echo $WL_Hover_Color; ?>;
     }
     .b-link-box .b-bottom-line{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-stripe .b-line{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-apart-horisontal .b-top-line, .b-link-apart-horisontal .b-top-line-up{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-apart-horisontal .b-bottom-line, .b-link-apart-horisontal .b-bottom-line-up{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-apart-vertical .b-top-line, .b-link-apart-vertical .b-top-line-up{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-apart-vertical .b-bottom-line, .b-link-apart-vertical .b-bottom-line-up{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
     .b-link-diagonal .b-line{
-        background: <?php echo $WL_Hover_Color; ?>;
+        background: rgba(<?php echo $HoverColorRGB; ?>, <?php echo $WL_Hover_Color_Opacity; ?>);;
     }
 
     .b-wrapper{

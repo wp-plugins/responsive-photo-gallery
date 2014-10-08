@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 1.1
+ * Version: 1.2
  * Description: Create and display various animated image gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
@@ -378,3 +378,26 @@ function get_image_gallery_pro_page_function() {
  * Responsive Gallery Short Code [WRG]
  */
 require_once("responsive-gallery-short-code.php");
+
+
+/**
+ * Hex Color code to RGB Color Code converter function
+ */
+if(!function_exists('RPGhex2rgbWeblizar')) {
+    function RPGhex2rgbWeblizar($hex) {
+       $hex = str_replace("#", "", $hex);
+
+       if(strlen($hex) == 3) {
+          $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+          $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+          $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+       } else {
+          $r = hexdec(substr($hex,0,2));
+          $g = hexdec(substr($hex,2,2));
+          $b = hexdec(substr($hex,4,2));
+       }
+       $rgb = array($r, $g, $b);
+       return $rgb; // returns an array with the rgb values
+    }
+}
+?>
