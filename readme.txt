@@ -4,7 +4,7 @@ Donate link: http://www.weblizar.com/responsive-photo-gallery/
 Tags: responsive gallery, add album, add gallery, add pictures, album, gallery, gallery image, image, multiple pictures, photo, photo album, photo gallery, pictures, upload images, website gallery, albums, best gallery plugin, best portfolio plugin, flash, foto, fotoalbum, gallery album, gallery bank, gallery image, gallery wordpress plugin, grid gallery, image album, image slider, images, lightbox, links, media, modal, photo albums, photo gallery, Photo Slider, photoalbum, photogallery, photos, picture, pictures, plugin, portfolio, portfolio gallery, portfolio wordpress plugin, Post, posts, responsive gallery, seo image, sidebar, slideshow, thumbnails, videos, website gallery, widget, wordpress gallery plugin, wordpress portfolio plugin, wp gallery, wp gallery plugin, carousel, categories, category, content slider, custom, custom fields, dashboard, FAQ, FAQ widget, filterable gallery, filterable portfolio,image-size,two-column,three-column, jpeg, jpg, jquery gallery, jquery portfolio, labels, nextgen, nextgen gallery, page, pages, , responsive slideshow, screenshot, screenshots, seo, shortcode, Simple gallery, slide, slide show, slider, slider plugin, slider widget, sliders, slides, slideshow, slideshow manager, slideshow plugin, sortable portfolio, thumbnails, thumbs, vertical slides, view images, visual items, web designer, website gallery, widget, widget gallery, widget slider, widget slideshow, widgets, wordpress faq, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wordpress portfolio, wordpress portfolio plugin, wordpress slider, wordpress slideshow, wp gallery, wp gallery plugins, wp slider, responsive slider
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,9 +23,10 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 * Fade Animation Effect
 * Two Design Layout
 * Two Types of Color Scheme
+* Hover color opacity effect
 * Integrated with Isotope Effect 
 * Two Different Font Awesome Icon
-* Bootstrap Model Light Box
+* Light Box Integrated
 * Browser Compatible
 * Add Unlimited Images into Gallery
 * Multilingual Translation Ready
@@ -89,7 +90,12 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 
 For more information, see Weblizar(http://wwww.weblizar.com/).
 
-= Version 1.3 21-Oct-2014 =
+= Version 1.4 28-Oct-2014 =
+* Remove unused pricing-table-responsive.css file
+* Resolved small bug 
+* Update some css code
+
+= Version 1.3 20-Oct-2014 =
 * Resolved design conflict
 * Update Bootstrap css
 * Remove Unused reset.css file

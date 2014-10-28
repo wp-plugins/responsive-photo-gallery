@@ -81,3 +81,24 @@ body {
 
 /*
  * =================== End pricing table =====================*/
+ 
+ 
+ /*
+ * =================== Mobile css for table =====================*/
+ @media (max-width: 320px) {
+  .pricing-three-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-table .plan {
+    margin-bottom: 20px;
+  }
+  .pricing-variable-height .plan {
+    margin-left: 0;
+  }
+  .pricing-three-column {
+    width: 100%;
+  }
+}

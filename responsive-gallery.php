@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 1.3
+ * Version: 1.4
  * Description: Create and display various animated image gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
@@ -367,8 +367,8 @@ function get_image_gallery_pro_page_function() {
     //css
     wp_enqueue_style('wl-font-awesome-4', WEBLIZAR_RG_PLUGIN_URL.'css/font-awesome-4.0.3/css/font-awesome.min.css');
     wp_enqueue_style('wl-pricing-table-css', WEBLIZAR_RG_PLUGIN_URL.'css/pricing-table.css');
-    wp_enqueue_style('wl-pricing-table-responsive-css', WEBLIZAR_RG_PLUGIN_URL.'css/pricing-table-responsive.css');
-    wp_enqueue_style('wl-boot-strap-responsive-min-2-3-css', WEBLIZAR_RG_PLUGIN_URL.'css/bootstrap-admin.css');
+    //wp_enqueue_style('wl-pricing-table-responsive-css', WEBLIZAR_RG_PLUGIN_URL.'css/pricing-table-responsive.css');
+    wp_enqueue_style('wl-boot-strap-admin', WEBLIZAR_RG_PLUGIN_URL.'css/bootstrap-admin.css');
     require_once("get-responsive-gallery-pro.php");
 }
 
