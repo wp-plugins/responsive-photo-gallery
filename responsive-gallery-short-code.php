@@ -96,7 +96,8 @@ function image_gallery_premium_short_code() {
      */
     $IG_CPT_Name = "responsive-gallery";
     $IG_Taxonomy_Name = "category";
-    $AllGalleries = array( 'post_type' => $IG_CPT_Name, 'orderby' => 'ASC');
+	$all_posts = wp_count_posts( 'responsive-gallery')->publish;
+    $AllGalleries = array( 'post_type' => $IG_CPT_Name, 'orderby' => 'ASC','posts_per_page' =>$all_posts);
     $loop = new WP_Query( $AllGalleries );
     ?>
     <div id="gallery1" class="gal-container">
