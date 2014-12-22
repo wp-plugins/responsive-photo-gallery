@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 1.7
+ * Version: 1.8
  * Description: Create and display various animated image gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
@@ -285,7 +285,7 @@ function responsive_photo_gallery_meta_save() {
             if($TotalImages) {
                 for($i=1; $i <= $TotalImages; $i++) {
                     $image_label = "image_label".$i;
-                    $name = $_POST['image_label'.$i];
+                    $name = stripslashes($_POST['image_label'.$i]);
                     $url = $_POST['rpg_img_url'.$i];
                     $ImagesArray[] = array(
                         'rpg_image_label' => $name,

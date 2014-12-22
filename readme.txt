@@ -3,8 +3,8 @@ Contributors: weblizar
 Donate link: http://www.weblizar.com/responsive-photo-gallery/
 Tags: responsive gallery, add album, add gallery, add pictures, album, gallery, gallery image, image, multiple pictures, photo, photo album, photo gallery, pictures, upload images, website gallery, albums, best gallery plugin, best portfolio plugin, flash, foto, fotoalbum, gallery album, gallery bank, gallery image, gallery wordpress plugin, grid gallery, image album, image slider, images, lightbox, links, media, modal, photo albums, photo gallery, Photo Slider, photoalbum, photogallery, photos, picture, pictures, plugin, portfolio, portfolio gallery, portfolio wordpress plugin, Post, posts, responsive gallery, seo image, sidebar, slideshow, thumbnails, videos, website gallery, widget, wordpress gallery plugin, wordpress portfolio plugin, wp gallery, wp gallery plugin, carousel, categories, category, content slider, custom, custom fields, dashboard, FAQ, FAQ widget, filterable gallery, filterable portfolio,image-size,two-column,three-column, jpeg, jpg, jquery gallery, jquery portfolio, labels, nextgen, nextgen gallery, page, pages, , responsive slideshow, screenshot, screenshots, seo, shortcode, Simple gallery, slide, slide show, slider, slider plugin, slider widget, sliders, slides, slideshow, slideshow manager, slideshow plugin, sortable portfolio, thumbnails, thumbs, vertical slides, view images, visual items, web designer, website gallery, widget, widget gallery, widget slider, widget slideshow, widgets, wordpress faq, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wordpress portfolio, wordpress portfolio plugin, wordpress slider, wordpress slideshow, wp gallery, wp gallery plugins, wp slider, responsive slider
 Requires at least: 3.3
-Tested up to: 4.0.1
-Stable tag: 1.7
+Tested up to: 4.1
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 * Add Unlimited Images into Gallery
 * Multilingual Translation Ready
 
-**Free Plugin Demo:** [Responsive Photo Gallery Free](http://weblizar.com/demo/plugins/free/responsive-photo-gallery/)
+**Free Plugin Demo:** [Responsive Photo Gallery Free](http://demo.weblizar.com/responsive-photo-gallery-free/)
  
 
 ### Responsive Photo Gallery Pro Features:
@@ -89,6 +89,10 @@ Using **[WRG]** shortcode, you can publish image or photo gallery into any Page 
 == Changelog ==
 
 For more information, see Weblizar(http://wwww.weblizar.com/).
+
+= Version 1.8 22-Dec-2014 =
+* Compatible up to: 4.1
+* Remove apostrophe error from image label
 
 = Version 1.7 01-Dec-2014 =
 * Compatible up to: 4.0.1
