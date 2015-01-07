@@ -88,8 +88,9 @@
             <tr>
                 <th scope="row"><label><?php _e("Image View Icon", WEBLIZAR_RPG_TEXT_DOMAIN); ?></label></th>
                 <td>
-                    <input type="radio" name="wl-image-view-icon" id="wl-image-view-icon" value="fa-picture-o"  <?php if($WL_Image_View_Icon == 'fa-picture-o' ) { echo "checked"; } ?>> <i class="fa fa-picture-o fa-2x"></i>
-                    <input type="radio" name="wl-image-view-icon" id="wl-image-view-icon" value="fa-camera" <?php if($WL_Image_View_Icon == 'fa-camera' ) { echo "checked"; } ?>> <i class="fa fa-camera fa-2x"></i>
+                    <input type="radio" name="wl-image-view-icon" id="wl-image-view-icon" value="fa-picture-o"  <?php if($WL_Image_View_Icon == 'fa-picture-o' ) { echo "checked"; } ?>> <i class="fa fa-picture-o fa-3x"></i>
+                    <input type="radio" name="wl-image-view-icon" id="wl-image-view-icon" value="fa-camera" <?php if($WL_Image_View_Icon == 'fa-camera' ) { echo "checked"; } ?>> <i class="fa fa-camera fa-3x"></i>
+                    <input type="radio" name="wl-image-view-icon" id="wl-image-view-icon" value="fa-camera-retro" <?php if($WL_Image_View_Icon == 'fa-camera-retro' ) { echo "checked"; } ?>> <i class="fa fa-camera-retro fa-3x"></i>
                     <p class="description"><strong><?php _e("Choose image view icon.", WEBLIZAR_RPG_TEXT_DOMAIN); ?>  </strong> (Get Unlimited Font Awesome Icon in plugin, View <a href="http://weblizar.com/plugins/responsive-photo-gallery-pro/" target="_new">detail</a> )</p>
                 </td>
             </tr>
