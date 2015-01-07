@@ -92,6 +92,7 @@ For more information, see Weblizar(http://wwww.weblizar.com/).
 
 = Version 1.9 09-Jan-2015 =
 * Add new Font Awesome icon for Image View Icon
+* Small changes in code 
 
 = Version 1.8 22-Dec-2014 =
 * Compatible up to: 4.1
