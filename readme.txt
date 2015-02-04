@@ -36,7 +36,7 @@ Using **[WRG id=xx]** shortcode, you can publish image or photo gallery into any
 **Free Plugin Demo:** [Responsive Photo Gallery Free](http://demo.weblizar.com/responsive-photo-gallery-free/)
  
 
-** Responsive Photo Gallery Pro Features**
+### Responsive Photo Gallery Pro Features
 
 * Responsive Gallery
 * Simple & Very Easy Admin Gallery Dashboard
@@ -65,7 +65,7 @@ Using **[WRG id=xx]** shortcode, you can publish image or photo gallery into any
 * Multilingual Translation Ready
 * And many more..
 
-** Check Demos **
+### Check Demos
 
 * [Responsive Photo Gallery Pro - Live Demo](http://demo.weblizar.com/responsive-photo-gallery-pro/)
 * [Responsive Photo Gallery Pro - Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
