@@ -1,13 +1,14 @@
 <?php
 add_shortcode( 'WRG', 'image_gallery_premium_short_code' );
-function image_gallery_premium_short_code() {
+function image_gallery_premium_short_code( $Id ) {
 	ob_start();
 
     /**
      * Load Responsive Gallery Settings
      */
-    $WL_RG_Settings  = unserialize( get_option("WL_IGP_Settings") );
-    if(count($WL_RG_Settings)) {
+    if(isset($Id['id'])) {
+		$RPG_Id = $Id['id'];
+		$WL_RG_Settings  = unserialize( get_option("WL_IGP_Settings") );
         $WL_Hover_Animation     = $WL_RG_Settings['WL_Hover_Animation'];
         $WL_Gallery_Layout      = $WL_RG_Settings['WL_Gallery_Layout'];
         $WL_Hover_Color         = $WL_RG_Settings['WL_Hover_Color'];
@@ -17,6 +18,7 @@ function image_gallery_premium_short_code() {
 		$WL_Gallery_Title       =  $WL_RG_Settings['WL_Gallery_Title'];
 		$WL_Hover_Color_Opacity = $WL_RG_Settings['WL_Hover_Color_Opacity'];
     } else {
+		$Id['id'] = "";
 		$WL_Hover_Color_Opacity = 1;
 		$WL_Hover_Animation     = "fade";
         $WL_Gallery_Layout      = "col-md-6";
@@ -29,7 +31,6 @@ function image_gallery_premium_short_code() {
 	$RGB = RPGhex2rgbWeblizar($WL_Hover_Color);
     $HoverColorRGB = implode(", ", $RGB);
 	?>
-
     <script>
         jQuery.browser = {};
         (function () {
@@ -97,14 +98,15 @@ function image_gallery_premium_short_code() {
     $IG_CPT_Name = "responsive-gallery";
     $IG_Taxonomy_Name = "category";
 	$all_posts = wp_count_posts( 'responsive-gallery')->publish;
-    $AllGalleries = array( 'post_type' => $IG_CPT_Name, 'orderby' => 'ASC','posts_per_page' =>$all_posts);
+	$AllGalleries = array( 'p' => $Id['id'], 'post_type' => $IG_CPT_Name, 'orderby' => 'ASC','posts_per_page' =>$all_posts);
+
     $loop = new WP_Query( $AllGalleries );
     ?>
     <div id="gallery1" class="gal-container">
     <?php while ( $loop->have_posts() ) : $loop->the_post();?>
         <!--get the post id-->
         <?php $post_id = get_the_ID(); ?>
-		<div style="display: block; overflow:hidden;">
+		<div id="gal-container-<?php echo get_the_ID(); ?>" style="display: block; overflow:hidden;">
 			<?php if($WL_Gallery_Title==""){ $WL_Gallery_Title == "yes"; } if($WL_Gallery_Title == "yes") { ?>
 			<!-- gallery title-->
 			<div class="rpg-gal-title" >
@@ -129,9 +131,7 @@ function image_gallery_premium_short_code() {
 					?>
 					<div class="<?php echo $WL_Gallery_Layout; ?> col-sm-6 wl-gallery" >
 						<div class="b-link-<?php echo $WL_Hover_Animation; ?> b-animate-go">
-
 							<img src="<?php echo $url; ?>" class="gall-img-responsive">
-
 							<div class="b-wrapper">
 								<h2 class="b-from-left b-animate b-delay03"><?php echo ucwords($name); ?></h2>
 								<p class="b-from-right b-animate b-delay03">
@@ -168,7 +168,7 @@ function image_gallery_premium_short_code() {
     </div>
     
 	<script type="text/javascript">
-		jQuery('.wl-gallery a').rebox();
+		jQuery('#gal-container-<?php echo get_the_ID(); ?>').rebox({ selector: 'a' });
 	</script>	
     <?php wp_reset_query(); ?>
     <?php

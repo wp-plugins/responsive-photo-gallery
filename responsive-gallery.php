@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 2.0
- * Description: Create and display various animated image gallery on WordPress blog.
+ * Version: 2.1
+ * Description: Create and display multiple animated image and photo gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
  * Plugin URI: http://weblizar.com/plugins/responsive-photo-gallery-pro/
@@ -74,12 +74,10 @@ function ResponsiveGallery() {
         'capability_type'     => 'page',
     );
     register_post_type( 'responsive-gallery', $args );
-
 }
 
 // Hook into the 'init' action
 add_action( 'init', 'ResponsiveGallery', 0 );
-
 
 /**
  * Add Meta Box & load required CSS and JS for interface
@@ -91,10 +89,8 @@ function ResponsivePhotoGallery_init() {
 	add_meta_box(__('Plugin Shortcode', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Plugin Shortcode', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_plugin_shortcode', 'responsive-gallery', 'side', 'low');
 	add_meta_box(__('Rate us on WordPress', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Rate us on WordPress', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_rate_us_function', 'responsive-gallery', 'side', 'low');
     add_meta_box(__('Upgrade To Pro Version', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Upgrade To Pro Version', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_upgrade_to_pro_function', 'responsive-gallery', 'side', 'low');
-    
 	add_meta_box(__('Pro Features', WEBLIZAR_RPG_TEXT_DOMAIN) , __('Pro Features', WEBLIZAR_RPG_TEXT_DOMAIN), 'wrg_pro_features', 'responsive-gallery', 'side', 'low');
-	   
-   wp_enqueue_script('theme-preview');
+	wp_enqueue_script('theme-preview');
     wp_enqueue_script('rpg-media-uploads',WEBLIZAR_RG_PLUGIN_URL.'js/rpg-media-upload-script.js',array('media-upload','thickbox','jquery'));
     wp_enqueue_style('dashboard');
     wp_enqueue_style('rpg-meta-css', WEBLIZAR_RG_PLUGIN_URL.'css/rpg-meta.css');
@@ -105,33 +101,31 @@ function ResponsivePhotoGallery_init() {
 plugin shortcode
 **/
 function wrg_plugin_shortcode(){
-?>
-<p>Use below shortcode in any Page/Post to publish your Responsive Photo Gallery</p>
-		<input readonly="readonly" type="text" value="<?php echo "[WRG]"; ?>"> 
-<?php
+	?>
+	<p>Use below shortcode in any Page/Post to publish your Responsive Photo Gallery</p>
+	<input readonly="readonly" type="text" value="<?php echo "[WRG id=".get_the_ID()."]"; ?>"> 
+	<?php
 } 
 
 /**
 Rate us 
 **/
 
-function wrg_rate_us_function(){
-?>
-<div style="text-align:center">
-<h3>If you like our plugin then please show us some love </h3>
+function wrg_rate_us_function(){ ?>
+	<div style="text-align:center">
+	<h3>If you like our plugin then please show us some love </h3>
+		<style>
+		.wrg-rate-us span.dashicons{
+		width: 30px;
+		height: 30px;
+		}
+		.wrg-rate-us span.dashicons-star-filled:before {
+		content: "\f155";
+		font-size: 30px;
+		}
+		</style>
 
-<style>
-.wrg-rate-us span.dashicons{
-width: 30px;
-height: 30px;
-}
-.wrg-rate-us span.dashicons-star-filled:before {
-content: "\f155";
-font-size: 30px;
-}
-</style>
-
-<a class="wrg-rate-us" style="text-align:center; text-decoration: none;font:normal 30px/l;" href="http://wordpress.org/plugins/responsive-photo-gallery/" target="_blank">
+		<a class="wrg-rate-us" style="text-align:center; text-decoration: none;font:normal 30px/l;" href="http://wordpress.org/plugins/responsive-photo-gallery/" target="_blank">
 			<span class="dashicons dashicons-star-filled"></span>
 			<span class="dashicons dashicons-star-filled"></span>
 			<span class="dashicons dashicons-star-filled"></span>
@@ -139,9 +133,9 @@ font-size: 30px;
 			<span class="dashicons dashicons-star-filled"></span>
 		</a>
 		<div class="upgrade-to-pro-demo" style="text-align:center;margin-bottom:10px;margin-top:10px;">
-	<a href="http://wordpress.org/plugins/responsive-photo-gallery/" target="_new" class="button button-primary button-hero">Click Here</a>
-</div>
+			<a href="http://wordpress.org/plugins/responsive-photo-gallery/" target="_new" class="button button-primary button-hero">Click Here</a>
 		</div>
+	</div>
 <?php
 }
 
@@ -154,9 +148,9 @@ function responsive_photo_gallery_function() {
     $i = 1;
     ?>
 	<style>
-		#titlediv #title {
+	#titlediv #title {
 		margin-bottom:15px;
-		}
+	}
 	</style>
     <input type="hidden" id="count_total" name="count_total" value="<?php if($TotalImages==0){ echo 0; } else { echo $TotalImages; } ?>"/>
     <div style="clear:left;"></div>
@@ -169,11 +163,11 @@ function responsive_photo_gallery_function() {
             $url = $rpg_single_photos_detail['rpg_image_url'];
             ?>
                 <div class="rpg-image-entry" id="rpg_img<?php echo $i; ?>">
-                        <a class="gallery_remove" href="#gallery_remove" id="rpg_remove_bt<?php echo $i; ?>"onclick="remove_meta_img(<?php echo $i; ?>)"><img src="<?php echo  WEBLIZAR_RG_PLUGIN_URL.'images/Close-icon.png'; ?>" /></a>
-                        <img src="<?php echo  $url; ?>" class="rpg-meta-image" alt=""  style="">
-                        <input type="button" id="upload-background-<?php echo $i; ?>" name="upload-background-<?php echo $i; ?>" value="Upload Image" class="button-primary" onClick="weblizar_image('<?php echo $i; ?>')" />
-                        <input type="text" id="rpg_img_url<?php echo $i; ?>" name="rpg_img_url<?php echo $i; ?>" class="rpg_label_text"  value="<?php echo  $url; ?>"  readonly="readonly" style="display:none;" />
-                        <input type="text" id="image_label<?php echo $i; ?>" name="image_label<?php echo $i; ?>" placeholder="Enter Image Label" class="rpg_label_text" value="<?php echo $name; ?>">
+					<a class="gallery_remove" href="#gallery_remove" id="rpg_remove_bt<?php echo $i; ?>"onclick="remove_meta_img(<?php echo $i; ?>)"><img src="<?php echo  WEBLIZAR_RG_PLUGIN_URL.'images/Close-icon.png'; ?>" /></a>
+					<img src="<?php echo  $url; ?>" class="rpg-meta-image" alt=""  style="">
+					<input type="button" id="upload-background-<?php echo $i; ?>" name="upload-background-<?php echo $i; ?>" value="Upload Image" class="button-primary" onClick="weblizar_image('<?php echo $i; ?>')" />
+					<input type="text" id="rpg_img_url<?php echo $i; ?>" name="rpg_img_url<?php echo $i; ?>" class="rpg_label_text"  value="<?php echo  $url; ?>"  readonly="readonly" style="display:none;" />
+					<input type="text" id="image_label<?php echo $i; ?>" name="image_label<?php echo $i; ?>" placeholder="Enter Image Label" class="rpg_label_text" value="<?php echo $name; ?>">
                 </div>
             <?php
             $i++;
@@ -183,12 +177,11 @@ function responsive_photo_gallery_function() {
     }
     ?>
 
-
     <div id="append_rpg_img">
     </div>
     <div class="rpg-image-entry add_rpg_new_image" onclick="add_rpg_meta_img()">
-            <div class="dashicons dashicons-plus"></div>
-            <p><?php _e('Add New Image', WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
+		<div class="dashicons dashicons-plus"></div>
+		<p><?php _e('Add New Image', WEBLIZAR_RPG_TEXT_DOMAIN); ?></p>
     </div>
     <div style="clear:left;"></div>
     <script>
@@ -249,27 +242,26 @@ function wrg_upgrade_to_pro_function(){
 
 function wrg_pro_features(){
 	?>
-
 	<ul style="">
-				<li class="plan-feature">Responsive Design</li>
-				<li class="plan-feature">Gallery Layout</li>
-				<li class="plan-feature">Unlimited Hover Color</li>
-				<li class="plan-feature">10 Types of Hover Color Opacity</li>
-				<li class="plan-feature">All Gallery Shortcode</li>
-				<li class="plan-feature">Each Gallery has Unique Shortcode</li>
-				<li class="plan-feature">8 Types of Hover Animation</li>
-				<li class="plan-feature">5 Types of Gallery Design Layout</li>
-				<li class="plan-feature">500+ of Font Style</li>
-				<li class="plan-feature">4 types Of Lightbox Integrated</li>
-				<li class="plan-feature">Drag and Drop image Position</li>
-			  <li class="plan-feature">Multiple Image uploader</li>
-			  <li class="plan-feature">Shortcode Button on post or page</li>
-			  <li class="plan-feature">Unique settings for each gallery</li>
-			  <li class="plan-feature">Hide/Show gallery Title and label</li>
-			  <li class="plan-feature">Font icon Customization</li>
-			  <li class="plan-feature">Google Fonts</li>
-			  <li class="plan-feature">Isotope/Masonry Effects</li>
-			</ul>
+		<li class="plan-feature">Responsive Design</li>
+		<li class="plan-feature">Gallery Layout</li>
+		<li class="plan-feature">Unlimited Hover Color</li>
+		<li class="plan-feature">10 Types of Hover Color Opacity</li>
+		<li class="plan-feature">All Gallery Shortcode</li>
+		<li class="plan-feature">Each Gallery has Unique Shortcode</li>
+		<li class="plan-feature">8 Types of Hover Animation</li>
+		<li class="plan-feature">5 Types of Gallery Design Layout</li>
+		<li class="plan-feature">500+ of Font Style</li>
+		<li class="plan-feature">4 types Of Lightbox Integrated</li>
+		<li class="plan-feature">Drag and Drop image Position</li>
+		<li class="plan-feature">Multiple Image uploader</li>
+		<li class="plan-feature">Shortcode Button on post or page</li>
+		<li class="plan-feature">Unique settings for each gallery</li>
+		<li class="plan-feature">Hide/Show gallery Title and label</li>
+		<li class="plan-feature">Font icon Customization</li>
+		<li class="plan-feature">Google Fonts</li>
+		<li class="plan-feature">Isotope/Masonry Effects</li>
+	</ul>
 	<?php 
 } 
 /**

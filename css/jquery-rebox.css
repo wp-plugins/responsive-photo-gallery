@@ -14,7 +14,7 @@
     -webkit-border-radius: 32px; -moz-border-radius: 32px; -ms-border-radius: 32px; border-radius: 32px;
     -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; transition: all 0.3s; }
 .rebox-button:hover,
-.rebox-button:focus { opacity: 1; -webkit-transform: scale(1.4); -moz-transform: scale(1.4); -ms-transform: scale(1.4); transform: scale(1.4); }
+.rebox-button:focus { color: #FFFFFF; opacity: 1; -webkit-transform: scale(1.4); -moz-transform: scale(1.4); -ms-transform: scale(1.4); transform: scale(1.4); }
 .rebox-close { right: 10px; top: 10px; }
 .rebox-next { right: 10px; top: 48%; }
 .rebox-prev { left: 10px; top: 48%; }
