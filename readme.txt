@@ -67,9 +67,9 @@ Using **[WRG id=xx]** shortcode, you can publish image or photo gallery into any
 
 ** Check Demos **
 
-[Responsive Photo Gallery Pro - Live Demo](http://demo.weblizar.com/responsive-photo-gallery-pro/)
-[Responsive Photo Gallery Pro - Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
-[Upgrade To Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
+* [Responsive Photo Gallery Pro - Live Demo](http://demo.weblizar.com/responsive-photo-gallery-pro/)
+* [Responsive Photo Gallery Pro - Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
+* [Upgrade To Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
 
 == Installation ==
 
