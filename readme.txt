@@ -14,9 +14,7 @@ Responsive Photo Gallery Allow You Add Unlimited Images To Photo Gallery Integra
 
 Responsive Photo Gallery is based on bootstrap framework. You can Add unlimited images on your blog site. Responsive Photo Gallery is provide fade animation, light box image preview and two gallery layout with various fonts. It's also provide isotope effect to adjust your image size according to screen resolution.
 
-Using **[WRG id=xx]** shortcode, you can publish image or photo gallery into any Page or Post in your WordPress sites.
-
-You can use multiple gallery shortcode on multiple pages and posts to display various images galleries.
+Using **[WRG id=xx]** shortcode, you can publish image or photo gallery into any Page or Post in your WordPress sites. You can use multiple gallery shortcode on multiple pages and posts to display various images galleries.
 
 **Features**
 
@@ -69,7 +67,7 @@ You can use multiple gallery shortcode on multiple pages and posts to display va
 
 ### Try Responsive Photo Gallery Pro: [Live Demo](http://demo.weblizar.com/responsive-photo-gallery-pro/)
 
-### Try Responsive Photo Gallery Pro:** [Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
+### Try Responsive Photo Gallery Pro: [Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
 
 ### Upgrade To: [Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
 
