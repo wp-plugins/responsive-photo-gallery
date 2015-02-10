@@ -2,13 +2,15 @@
 add_shortcode( 'WRG', 'image_gallery_premium_short_code' );
 function image_gallery_premium_short_code( $Id ) {
 	ob_start();
-
-    /**
+	if(!isset($Id['id'])) {
+	$Id['id'] = "";
+	}
+	/**
      * Load Responsive Gallery Settings
      */
-    if(isset($Id['id'])) {
-		$RPG_Id = $Id['id'];
-		$WL_RG_Settings  = unserialize( get_option("WL_IGP_Settings") );
+    
+	$WL_RG_Settings  = unserialize( get_option("WL_IGP_Settings") );
+	if(count($WL_RG_Settings)) {
         $WL_Hover_Animation     = $WL_RG_Settings['WL_Hover_Animation'];
         $WL_Gallery_Layout      = $WL_RG_Settings['WL_Gallery_Layout'];
         $WL_Hover_Color         = $WL_RG_Settings['WL_Hover_Color'];
@@ -18,7 +20,6 @@ function image_gallery_premium_short_code( $Id ) {
 		$WL_Gallery_Title       =  $WL_RG_Settings['WL_Gallery_Title'];
 		$WL_Hover_Color_Opacity = $WL_RG_Settings['WL_Hover_Color_Opacity'];
     } else {
-		$Id['id'] = "";
 		$WL_Hover_Color_Opacity = 1;
 		$WL_Hover_Animation     = "fade";
         $WL_Gallery_Layout      = "col-md-6";
@@ -105,8 +106,8 @@ function image_gallery_premium_short_code( $Id ) {
     <div id="gallery1" class="gal-container">
     <?php while ( $loop->have_posts() ) : $loop->the_post();?>
         <!--get the post id-->
-        <?php $post_id = get_the_ID(); ?>
-		<div id="gal-container-<?php echo get_the_ID(); ?>" style="display: block; overflow:hidden;">
+        <?php $post_id = $Id['id']; ?>
+		<div id="gal-container-<?php echo $post_id; ?>" style="display: block; overflow:hidden;">
 			<?php if($WL_Gallery_Title==""){ $WL_Gallery_Title == "yes"; } if($WL_Gallery_Title == "yes") { ?>
 			<!-- gallery title-->
 			<div class="rpg-gal-title" >
@@ -166,12 +167,7 @@ function image_gallery_premium_short_code( $Id ) {
 		</div>
     <?php endwhile; ?>
     </div>
-    
-	<script type="text/javascript">
-		jQuery('#gal-container-<?php echo get_the_ID(); ?>').rebox({ selector: 'a' });
-	</script>	
-    <?php wp_reset_query(); ?>
-    <?php
-	return ob_get_clean();
+   <?php wp_reset_query(); 
+    return ob_get_clean();
 }
 ?>

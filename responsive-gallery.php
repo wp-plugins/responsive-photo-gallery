@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 2.1
+ * Version: 2.2
  * Description: Create and display multiple animated image and photo gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
@@ -324,6 +324,7 @@ function WeblizarResponsiveGalleryShortCodeDetect() {
 			css js
 			**/
 			wp_enqueue_script('jquery-rebox',WEBLIZAR_RG_PLUGIN_URL.'js/jquery-rebox.js', array('jquery'));
+			wp_enqueue_script('lightbox-script2',WEBLIZAR_RG_PLUGIN_URL.'js/lightbox-script.js', array('jquery'), '', true);
 
 			wp_enqueue_style('jquery-rebox-css', WEBLIZAR_RG_PLUGIN_URL.'css/jquery-rebox.css');
 
