@@ -111,7 +111,7 @@ function image_gallery_premium_short_code( $Id ) {
 			<?php if($WL_Gallery_Title==""){ $WL_Gallery_Title == "yes"; } if($WL_Gallery_Title == "yes") { ?>
 			<!-- gallery title-->
 			<div class="rpg-gal-title" >
-				<?php echo ucwords(get_the_title($post_id)); ?>
+				<?php echo get_the_title($post_id); ?>
 			</div>
 			<?php } ?>
 			<!-- gallery photos-->
@@ -134,9 +134,9 @@ function image_gallery_premium_short_code( $Id ) {
 						<div class="b-link-<?php echo $WL_Hover_Animation; ?> b-animate-go">
 							<img src="<?php echo $url; ?>" class="gall-img-responsive">
 							<div class="b-wrapper">
-								<h2 class="b-from-left b-animate b-delay03"><?php echo ucwords($name); ?></h2>
+								<h2 class="b-from-left b-animate b-delay03"><?php echo $name; ?></h2>
 								<p class="b-from-right b-animate b-delay03">
-									<a href="<?php echo $url; ?>" title="<?php echo ucwords($name); ?>">
+									<a href="<?php echo $url; ?>" title="<?php echo $name; ?>">
 										<i class="fa <?php echo $WL_Image_View_Icon; ?> fa-2x"></i>
 									</a>
 								</p>

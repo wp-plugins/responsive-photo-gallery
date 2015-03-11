@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Responsive Photo Gallery
- * Version: 2.2
+ * Version: 2.3
  * Description: Create and display multiple animated image and photo gallery on WordPress blog.
  * Author: Weblizar
  * Author URI: http://www.weblizar.com
