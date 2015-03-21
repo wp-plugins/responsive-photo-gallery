@@ -775,8 +775,9 @@ visibility:visible;
 }
 
 .b-from-left{
-position:relative;
-left:-100%;
+	position:relative;
+	left:-100%;
+	top: 40%;
 }
 .b-animate-go:hover .b-from-left{
 left:0;
@@ -785,6 +786,7 @@ left:0;
 .b-from-right{
 position:relative;
 right:-100%;
+ top: 45%;
 }
 .b-animate-go:hover .b-from-right{
 right:0;
