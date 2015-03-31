@@ -71,6 +71,12 @@ Using **[WRG id=xx]** shortcode, you can publish image or photo gallery into any
 * [Responsive Photo Gallery Pro - Admin Demo](http://demo.weblizar.com/responsive-photo-gallery-admin-demo/)
 * [Upgrade To Responsive Photo Gallery Pro](http://weblizar.com/plugins/responsive-photo-gallery-pro/)
 
+
+### Included Translations:
+
+* Turkish(tr_TR) by [Gürsel Çetin | GC Studio | Freelancer](http://www.gurselcetin.com/)
+
+
 == Installation ==
 
 1. Upload the entire **responsive-photo-gallery** folder to the **/wp-content/plugins/** directory.
