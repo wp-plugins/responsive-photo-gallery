@@ -83,11 +83,7 @@ blockquote:before,
 blockquote:after {
   content: "";
 }
-address {
-  margin-bottom: 20px;
-  font-style: normal;
-  line-height: 1.42857143;
-}
+
 code,
 kbd,
 pre,
